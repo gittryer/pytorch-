@@ -1,0 +1,34 @@
+```python
+#导入pytorch包
+import torch
+import numpy as np
+#创建5*3的空张量
+x=torch.empty(5,3)
+#创建5*3的随机张量
+x=torch.randn(5,3)
+#创建5*3的0张量
+x=torch.zeros(5,3,dtype=torch.long)
+#从数组创建张量
+x=torch.tensor([5.5,3,6])
+#从以有的张量创建新张量
+x=torch.rand_like(x,dtype=torch.float32)
+#打印张量的维度
+print(x.size())
+#张量求和
+x=torch.randn(2,8)
+y=torch.randn(2,8)
+print(x+y)
+#张量+1
+x=torch.zeros(5,2)
+y=x+1
+print(y)
+#取张量第一列
+print(x[:,1])
+#张量的resize
+x=torch.randn(4,4).view(16).view(2,8)
+#张量中取出数字
+x=torch.randn(1).item()
+#从数组创建张量
+x=torch.from_numpy(np.ones(5))
+print(x)
+```
